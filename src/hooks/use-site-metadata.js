@@ -13,11 +13,8 @@ const useSiteMetadata = () => {
               photo
               contacts {
                 email
-                telegram
                 twitter
                 github
-                rss
-                vkontakte
               }
             }
             menu {
@@ -28,7 +25,6 @@ const useSiteMetadata = () => {
             title
             subtitle
             copyright
-            disqusShortname
           }
         }
       }

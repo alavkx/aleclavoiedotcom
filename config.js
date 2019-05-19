@@ -1,38 +1,36 @@
 'use strict';
 
 module.exports = {
-  url: 'https://lumen.netlify.com',
-  title: 'Blog by John Doe',
-  subtitle: 'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
-  copyright: '© All rights reserved.',
+  url: 'https://aleclavoie.com',
+  title: 'Personal blog and resume for Software Engineer, Alec Lavoie',
+  subtitle:
+    'Developing front-end JavaScript and functional programming accumen since 2016',
+  copyright: 'Alec Lavoie© All rights reserved.',
   disqusShortname: '',
   postsPerPage: 4,
-  googleAnalyticsId: 'UA-73379983-2',
+  googleAnalyticsId: 'UA-140461534-1',
   menu: [
     {
       label: 'Articles',
-      path: '/'
+      path: '/',
     },
     {
       label: 'About me',
-      path: '/pages/about'
+      path: '/pages/about',
     },
     {
       label: 'Contact me',
-      path: '/pages/contacts'
-    }
+      path: '/pages/contacts',
+    },
   ],
   author: {
-    name: 'John Doe',
+    name: 'Alec Lavoie',
     photo: '/photo.jpg',
-    bio: 'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
+    bio: 'Software Engineer',
     contacts: {
-      email: '#',
-      telegram: '#',
-      twitter: '#',
-      github: '#',
-      rss: '#',
-      vkontakte: '#'
-    }
-  }
+      email: 'alavoie3+dotcom@gmail.com',
+      twitter: '_alavkx',
+      github: 'alavkx',
+    },
+  },
 };

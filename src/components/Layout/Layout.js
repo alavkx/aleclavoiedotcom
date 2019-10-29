@@ -11,15 +11,10 @@ type Props = {
   location: any,
 };
 
-const Layout = ({
-  children,
-  title,
-  description,
-  location: { pathname },
-}: Props) => {
+const Layout = ({ children, title, description, location }: Props) => {
   useEffect(() => {
     window.Appcues.page();
-  }, [pathname]);
+  }, [location.pathname]);
   return (
     <div className={styles.layout}>
       <Helmet>

@@ -7,16 +7,20 @@ import Sidebar from '../components/Sidebar';
 import Page from '../components/Page';
 import { useSiteMetadata, useTagsList } from '../hooks';
 
-const TagsListTemplate = () => {
+const TagsListTemplate = ({ location }) => {
   const { title, subtitle } = useSiteMetadata();
   const tags = useTagsList();
 
   return (
-    <Layout title={`Tags - ${title}`} description={subtitle}>
+    <Layout
+      title={`Tags - ${title}`}
+      description={subtitle}
+      location={location}
+    >
       <Sidebar />
       <Page title="Tags">
         <ul>
-          {tags.map((tag) => (
+          {tags.map(tag => (
             <li key={tag.fieldValue}>
               <Link to={`/tag/${kebabCase(tag.fieldValue)}/`}>
                 {tag.fieldValue} ({tag.totalCount})

@@ -7,16 +7,20 @@ import Layout from '../components/Layout';
 import Page from '../components/Page';
 import { useSiteMetadata, useCategoriesList } from '../hooks';
 
-const CategoriesListTemplate = () => {
+const CategoriesListTemplate = ({ location }) => {
   const { title, subtitle } = useSiteMetadata();
   const categories = useCategoriesList();
 
   return (
-    <Layout title={`Categories - ${title}`} description={subtitle}>
+    <Layout
+      title={`Categories - ${title}`}
+      description={subtitle}
+      location={location}
+    >
       <Sidebar />
       <Page title="Categories">
         <ul>
-          {categories.map((category) => (
+          {categories.map(category => (
             <li key={category.fieldValue}>
               <Link to={`/category/${kebabCase(category.fieldValue)}/`}>
                 {category.fieldValue} ({category.totalCount})
